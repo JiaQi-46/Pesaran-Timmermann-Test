@@ -28,8 +28,8 @@ def pt_test(y, yHat):
     
     pValue = 1 - norm.cdf(s)
     
-    pt_return = collections.namedtuple('PT_test','PT_statistics p_value')
+    pt_return = collections.namedtuple('PT_test','PT_statistics p_value SuccessR')
     
-    rt = pt_return(PT_statistics = s,p_value = pValue)
+    rt = pt_return(PT_statistics = s, p_value = pValue, SuccessR = PHat)
     
     return rt
