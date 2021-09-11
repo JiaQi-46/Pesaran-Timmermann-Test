@@ -26,7 +26,7 @@ def pt_test(y, yHat):
     
     s = (PHat - PStar) / np.sqrt(VarPHat - VarPStar)
     
-    pValue = 1 - norm.cdf(s)
+    pValue = norm.sf(s)
     
     pt_return = collections.namedtuple('PT_test','PT_statistics p_value SuccessR')
     
